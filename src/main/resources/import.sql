@@ -1,0 +1,1 @@
+INSERT INTO productos(nombre, nombre_marca, numero_articulo, fecha_de_llegada)VALUES('aadasda', 'Adidas', '21', '2018-03-01');
