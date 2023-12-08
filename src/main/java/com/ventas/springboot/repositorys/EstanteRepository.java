@@ -1,7 +1,7 @@
 package com.ventas.springboot.repositorys;
 
 import com.ventas.springboot.modelo.entidades.entity.Estante;
-import com.ventas.springboot.modelo.entidades.enumeradores.Vestimenta;
+import com.ventas.springboot.modelo.entidades.entity.enumeradores.Vestimenta;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

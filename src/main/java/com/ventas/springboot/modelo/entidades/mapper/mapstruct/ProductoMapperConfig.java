@@ -7,6 +7,5 @@ import org.mapstruct.MappingTarget;
 
 @MapperConfig
 public interface ProductoMapperConfig {
-
     void  mapProducto(Producto producto, @MappingTarget ProductoDTO productoDTO);
 }

@@ -2,6 +2,7 @@ package com.ventas.springboot.modelo.entidades.dto;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.ventas.springboot.modelo.entidades.entity.LugarOrigen;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -27,4 +28,5 @@ public abstract class ProductoDTO {
     @Pattern(regexp = "[0-9]+")
     @Size(min = 1, max = 10)
     private String numeroArticulo;
+    private LugarOrigen lugarOrigen;
 }

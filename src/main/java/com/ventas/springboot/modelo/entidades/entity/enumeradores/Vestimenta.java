@@ -1,4 +1,4 @@
-package com.ventas.springboot.modelo.entidades.enumeradores;
+package com.ventas.springboot.modelo.entidades.entity.enumeradores;
 
 public enum Vestimenta {
     CASUAL,

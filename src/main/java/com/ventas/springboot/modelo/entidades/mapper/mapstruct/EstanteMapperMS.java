@@ -10,8 +10,8 @@ import org.mapstruct.Mappings;
 public interface EstanteMapperMS {
     @Mappings({
           @Mapping(source = "id", target = "codigo"),
-          @Mapping(source = "nroEstante", target = "numero_estante"),
-          @Mapping(source = "cantidadRopa", target = "cantidad_ropa"),
+          @Mapping(source = "nroEstante", target = "nroEstante" ),
+          @Mapping(source = "cantidadRopa", target = "cantidadRopa"),
     })
     EstanteDTO mapEstante(Estante estante);
 }

@@ -2,7 +2,7 @@ package com.ventas.springboot.service.implementaciones;
 
 import com.ventas.springboot.modelo.entidades.entity.Producto;
 import com.ventas.springboot.modelo.entidades.entity.Ropa;
-import com.ventas.springboot.modelo.entidades.enumeradores.TipoRopa;
+import com.ventas.springboot.modelo.entidades.entity.enumeradores.TipoRopa;
 import com.ventas.springboot.repositorys.RopaRepository;
 import com.ventas.springboot.service.contratos.RopaDAO;
 import org.springframework.beans.factory.annotation.Qualifier;

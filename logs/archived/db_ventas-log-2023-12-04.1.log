@@ -1,0 +1,12 @@
+2023-12-04 19:44:31,827 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-04 19:44:37,684 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-12-04 19:44:39,118 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [restartedMain] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-04 19:44:42,983 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9082"]
+2023-12-04 19:44:43,178 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9082 (http) with context path '/api/v2/db_ventas'
+2023-12-04 19:44:43,317 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started VentasDeCualquierTipoApplication in 45.147 seconds (process running for 52.421)
+2023-12-04 19:46:14,668 INFO org.apache.juli.logging.DirectJDKLog [http-nio-9082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 19:46:14,670 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9082-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-04 19:46:14,678 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9082-exec-1] Completed initialization in 5 ms
+2023-12-04 19:47:22,784 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-04 19:47:22,816 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-04 19:47:22,896 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

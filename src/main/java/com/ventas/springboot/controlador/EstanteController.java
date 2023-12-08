@@ -2,14 +2,16 @@ package com.ventas.springboot.controlador;
 
 import com.ventas.springboot.exeption.BadRequestException;
 import com.ventas.springboot.modelo.entidades.entity.Estante;
-import com.ventas.springboot.modelo.entidades.enumeradores.Vestimenta;
+import com.ventas.springboot.modelo.entidades.entity.enumeradores.Vestimenta;
 import com.ventas.springboot.service.contratos.EstanteDAO;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.web.bind.annotation.*;
 
 
 
-
+@Deprecated
+@RestController
+@ConditionalOnProperty(prefix = "app", name = "controller.enable-dto", havingValue = "false")
 public class EstanteController extends GenericController<Estante, EstanteDAO>{
 
     public EstanteController(EstanteDAO service){

@@ -1,7 +1,7 @@
 package com.ventas.springboot.service.implementaciones;
 
 import com.ventas.springboot.modelo.entidades.entity.Estante;
-import com.ventas.springboot.modelo.entidades.enumeradores.Vestimenta;
+import com.ventas.springboot.modelo.entidades.entity.enumeradores.Vestimenta;
 import com.ventas.springboot.repositorys.EstanteRepository;
 import com.ventas.springboot.service.contratos.EstanteDAO;
 import org.springframework.beans.factory.annotation.Autowired;

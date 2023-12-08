@@ -1,10 +1,9 @@
 package com.ventas.springboot.modelo.entidades.entity;
 
-import com.ventas.springboot.modelo.entidades.enumeradores.Vestimenta;
+import com.ventas.springboot.modelo.entidades.entity.enumeradores.Vestimenta;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity

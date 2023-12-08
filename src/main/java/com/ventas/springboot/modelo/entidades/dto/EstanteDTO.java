@@ -16,14 +16,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @ApiModel(description = "Estante de bodega", value = "Estante", reference = "Estante")
 public class EstanteDTO {
-
-    @ApiModelProperty(name = "Codigo del Sistema", example = "5")
+    @ApiModelProperty(name = "Codigo del sistema", example = "5")
     private Integer codigo;
     @NotNull
-    @Positive(message = "Debe de ingresar un valor")
-    @ApiModelProperty(name = "Numero de estante", example = "Tipos de distribucion", required = true)
-    private Integer nroEstante;
-    @Positive
-    @ApiModelProperty(notes = "Cantidad de ropa en el estante", example = "55", required = true)
+    @NotEmpty(message = "Debe de ingresar un valor")
+    @Size(min = 0, max = 80)
+    @ApiModelProperty(name = "Numero del estante", example = "Estante 12", required = true)
+    private Integer NroEstante;
+    @Positive(message = "El valor no puede ser negativo")
+    @ApiModelProperty(name = "Cantidad de Ropa de todo el estante", example = "55", required = true)
     private Integer cantidadRopa;
+
 }

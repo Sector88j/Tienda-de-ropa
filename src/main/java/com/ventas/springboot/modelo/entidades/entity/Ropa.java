@@ -1,9 +1,9 @@
 package com.ventas.springboot.modelo.entidades.entity;
 
-import com.ventas.springboot.modelo.entidades.enumeradores.TipoRopa;
-import com.ventas.springboot.modelo.entidades.enumeradores.Vestimenta;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.ventas.springboot.modelo.entidades.entity.enumeradores.TipoRopa;
+import com.ventas.springboot.modelo.entidades.entity.enumeradores.Vestimenta;
 import jakarta.persistence.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
 
@@ -42,12 +42,16 @@ public class Ropa extends Producto{
     private Material material;
 
 
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "ropa"})
+    private Estante estante;
+
+
     public Ropa(){
 
     }
 
     public Ropa(Integer id, String nombre, String nombreMarca, String numeroArticulo, BigDecimal precio,
-                TipoRopa tipoRopa, String ropa, Bodega bodega, Material material, Vestimenta vestimenta) {
+                TipoRopa tipoRopa, String ropa, Bodega bodega, Material material, Vestimenta vestimenta, Estante estante) {
         super(id, nombre, nombreMarca, numeroArticulo);
         this.precio = precio;
         this.tipoRopa = tipoRopa;
@@ -55,6 +59,7 @@ public class Ropa extends Producto{
         this.bodega = bodega;
         this.material = material;
         this.vestimenta = vestimenta;
+        this.estante = estante;
     }
 
     public BigDecimal getPrecio() {
@@ -103,6 +108,14 @@ public class Ropa extends Producto{
 
     public void setVestimenta(Vestimenta vestimenta) {
         this.vestimenta = vestimenta;
+    }
+
+    public Estante getEstante() {
+        return estante;
+    }
+
+    public void setEstante(Estante estante) {
+        this.estante = estante;
     }
 
     @Override

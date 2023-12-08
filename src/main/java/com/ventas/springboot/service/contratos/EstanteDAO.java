@@ -1,7 +1,7 @@
 package com.ventas.springboot.service.contratos;
 
 import com.ventas.springboot.modelo.entidades.entity.Estante;
-import com.ventas.springboot.modelo.entidades.enumeradores.Vestimenta;
+import com.ventas.springboot.modelo.entidades.entity.enumeradores.Vestimenta;
 
 import java.util.Optional;
 
