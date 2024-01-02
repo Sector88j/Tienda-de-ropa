@@ -1,0 +1,50 @@
+2023-12-19 19:26:04,152 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-19 19:26:04,343 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting VentasDeCualquierTipoApplication using Java 17.0.7 with PID 15944 (C:\Users\aermb\OneDrive\Escritorio\DOMINGOS SPRING-BOOT\ventas-de-cualquier-tipo\target\classes started by aermb in C:\Users\aermb\OneDrive\Escritorio\DOMINGOS SPRING-BOOT\ventas-de-cualquier-tipo)
+2023-12-19 19:26:04,348 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 19:26:04,626 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-19 19:26:04,642 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-19 19:26:08,012 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 19:26:08,240 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 206 ms. Found 3 JPA repository interfaces.
+2023-12-19 19:26:10,180 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9082 (http)
+2023-12-19 19:26:10,200 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9082"]
+2023-12-19 19:26:10,207 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-12-19 19:26:10,208 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-12-19 19:26:10,431 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-12-19 19:26:10,437 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 5787 ms
+2023-12-19 19:26:10,850 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 19:26:10,982 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-12-19 19:26:10,987 INFO org.hibernate.cfg.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2023-12-19 19:26:11,476 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [restartedMain] HHH000021: Bytecode provider name : bytebuddy
+2023-12-19 19:26:11,804 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-19 19:26:11,844 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-12-19 19:26:12,277 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f62161e
+2023-12-19 19:26:12,282 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-12-19 19:26:13,249 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [restartedMain] HHH000021: Bytecode provider name : bytebuddy
+2023-12-19 19:26:14,890 INFO org.hibernate.metamodel.internal.EmbeddableInstantiatorPojoStandard [restartedMain] HHH000182: No default (no-argument) constructor for class: com.ventas.springboot.modelo.entidades.entity.Material (class must be instantiated by Interceptor)
+2023-12-19 19:26:15,442 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 19:26:15,484 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table estantes drop foreign key FK_BODEGA_ID
+2023-12-19 19:26:16,481 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table ropas drop foreign key FX_ALMACEN_ID
+2023-12-19 19:26:16,582 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table ropas drop foreign key FK1fclji77u1e5ggrs4b1s8oea6
+2023-12-19 19:26:16,789 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] drop table if exists almacenes
+2023-12-19 19:26:16,834 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] drop table if exists estantes
+2023-12-19 19:26:17,334 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] drop table if exists productos
+2023-12-19 19:26:17,644 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] drop table if exists ropas
+2023-12-19 19:26:18,181 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] create table almacenes (bloque_de_estantes integer, id integer not null auto_increment, fecha_entrada datetime(6), fecha_salida datetime(6), numero_del_estante varchar(255) not null, primary key (id)) engine=InnoDB
+2023-12-19 19:26:18,352 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] create table estantes (bodega_id integer, cantidad_ropa integer, id integer not null auto_increment, numero_estante integer not null, tamaño_estante varchar(255), tipo_vestimenta enum ('CASUAL','DEPORTIVA','FORMAL','SEMIFORMAL'), primary key (id)) engine=InnoDB
+2023-12-19 19:26:18,516 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] create table productos (id integer not null auto_increment, fecha_de_llegada datetime(6) not null, numero_articulo varchar(10) not null, nombre varchar(60) not null, nombre_marca varchar(60) not null, calle varchar(255), codigo_postal varchar(255), nombre_de_fabrica varchar(255), numero varchar(255), primary key (id)) engine=InnoDB
+2023-12-19 19:26:18,654 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] create table ropas (almacen_id integer, precio decimal(38,2), producto_id integer not null, calidad varchar(255), colordetinte varchar(255), material varchar(255), ropa varchar(255), tipo_ropa enum ('PRENDA_HOMBRE','PRENDA_MUJER'), tipo_vestimenta enum ('CASUAL','DEPORTIVA','FORMAL','SEMIFORMAL'), estante varbinary(255), primary key (producto_id)) engine=InnoDB
+2023-12-19 19:26:18,868 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table almacenes add constraint UK_sj757y2oy0tc05d3kxiquohk2 unique (numero_del_estante)
+2023-12-19 19:26:19,038 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table productos add constraint UK_5f2vwu3i1qftk3qv24c0nbsd4 unique (numero_articulo)
+2023-12-19 19:26:19,235 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table ropas add constraint UK_kkxodv3y2a31we1pyr97rpx8u unique (almacen_id)
+2023-12-19 19:26:19,362 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table estantes add constraint FK_BODEGA_ID foreign key (bodega_id) references almacenes (id)
+2023-12-19 19:26:19,691 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table ropas add constraint FX_ALMACEN_ID foreign key (almacen_id) references almacenes (id)
+2023-12-19 19:26:19,987 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] alter table ropas add constraint FK1fclji77u1e5ggrs4b1s8oea6 foreign key (producto_id) references productos (id)
+2023-12-19 19:26:20,357 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [restartedMain] INSERT INTO productos(nombre, nombre_marca, numero_articulo, fecha_de_llegada)VALUES('aadasda', 'Adidas', '21', '2018-03-01')
+2023-12-19 19:26:20,453 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 19:26:21,302 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-19 19:26:23,157 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 19:26:23,712 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-12-19 19:26:23,986 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [restartedMain] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-19 19:26:24,257 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9082"]
+2023-12-19 19:26:24,303 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9082 (http) with context path '/api/v2/db_ventas'
+2023-12-19 19:26:24,425 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started VentasDeCualquierTipoApplication in 21.144 seconds (process running for 23.267)

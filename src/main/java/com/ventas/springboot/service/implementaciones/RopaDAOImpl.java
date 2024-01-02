@@ -20,31 +20,7 @@ public class RopaDAOImpl extends ProductoDAOImpl implements RopaDAO {
     }
 
     @Override
-    @Transactional(readOnly = true)
-    public Iterable<Producto> findAll(){
-        Iterable<Producto> productos = super.findAll();
-        List<Producto> ropas = new ArrayList<>();
-        for(Producto producto : productos){
-            if(producto instanceof Ropa){
-                ropas.add(producto);
-            }
-        }
-        return ropas;
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Optional<Producto> findById(Integer id){
-        Optional<Producto> optionalProducto = super.findById(id);
-        Producto producto = optionalProducto.get();
-        if(producto instanceof Ropa){
-            return optionalProducto;
-        }
-        return null;
-    }
-
-    @Override
     public Iterable<Producto> buscarRopasPorTipoRopa(TipoRopa tipoRopa){
-        return null;
+        return ((RopaRepository)repository).buscarRopasPorTipoRopa(tipoRopa);
     }
 }

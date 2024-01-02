@@ -1,0 +1,44 @@
+2023-12-19 19:35:14,596 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 19:35:14,643 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-19 19:35:14,673 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-12-19 19:35:54,955 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ventas.springboot.VentasDeCualquierTipoApplicationTests]: VentasDeCualquierTipoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-19 19:35:55,532 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ventas.springboot.VentasDeCualquierTipoApplication for test class com.ventas.springboot.VentasDeCualquierTipoApplicationTests
+2023-12-19 19:35:56,666 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-19 19:35:56,782 INFO org.springframework.boot.StartupInfoLogger [main] Starting VentasDeCualquierTipoApplicationTests using Java 17.0.7 with PID 6956 (started by aermb in C:\Users\aermb\OneDrive\Escritorio\DOMINGOS SPRING-BOOT\ventas-de-cualquier-tipo)
+2023-12-19 19:35:56,805 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 19:36:00,286 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 19:36:00,527 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 214 ms. Found 3 JPA repository interfaces.
+2023-12-19 19:36:02,058 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-19 19:36:02,213 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-12-19 19:36:02,221 INFO org.hibernate.cfg.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-19 19:36:02,877 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-12-19 19:36:03,269 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-19 19:36:03,315 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-19 19:36:03,755 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b56c222
+2023-12-19 19:36:03,760 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-19 19:36:04,996 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-12-19 19:36:06,879 INFO org.hibernate.metamodel.internal.EmbeddableInstantiatorPojoStandard [main] HHH000182: No default (no-argument) constructor for class: com.ventas.springboot.modelo.entidades.entity.Material (class must be instantiated by Interceptor)
+2023-12-19 19:36:07,333 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-19 19:36:07,388 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table estantes drop foreign key FK_BODEGA_ID
+2023-12-19 19:36:08,538 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table ropas drop foreign key FX_ALMACEN_ID
+2023-12-19 19:36:09,125 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table ropas drop foreign key FK1fclji77u1e5ggrs4b1s8oea6
+2023-12-19 19:36:09,186 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] drop table if exists almacenes
+2023-12-19 19:36:09,248 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] drop table if exists estantes
+2023-12-19 19:36:09,433 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] drop table if exists productos
+2023-12-19 19:36:09,500 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] drop table if exists ropas
+2023-12-19 19:36:09,648 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] create table almacenes (bloque_de_estantes integer, id integer not null auto_increment, fecha_entrada datetime(6), fecha_salida datetime(6), numero_del_estante varchar(255) not null, primary key (id)) engine=InnoDB
+2023-12-19 19:36:09,800 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] create table estantes (bodega_id integer, cantidad_ropa integer, id integer not null auto_increment, numero_estante integer not null, tamaño_estante varchar(255), tipo_vestimenta enum ('CASUAL','DEPORTIVA','FORMAL','SEMIFORMAL'), primary key (id)) engine=InnoDB
+2023-12-19 19:36:10,010 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] create table productos (id integer not null auto_increment, fecha_de_llegada datetime(6) not null, numero_articulo varchar(10) not null, nombre varchar(60) not null, nombre_marca varchar(60) not null, calle varchar(255), codigo_postal varchar(255), nombre_de_fabrica varchar(255), numero varchar(255), primary key (id)) engine=InnoDB
+2023-12-19 19:36:10,257 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] create table ropas (almacen_id integer, precio decimal(38,2), producto_id integer not null, calidad varchar(255), colordetinte varchar(255), material varchar(255), ropa varchar(255), tipo_ropa enum ('PRENDA_HOMBRE','PRENDA_MUJER'), tipo_vestimenta enum ('CASUAL','DEPORTIVA','FORMAL','SEMIFORMAL'), estante varbinary(255), primary key (producto_id)) engine=InnoDB
+2023-12-19 19:36:10,442 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table almacenes add constraint UK_sj757y2oy0tc05d3kxiquohk2 unique (numero_del_estante)
+2023-12-19 19:36:10,568 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table productos add constraint UK_5f2vwu3i1qftk3qv24c0nbsd4 unique (numero_articulo)
+2023-12-19 19:36:10,681 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table ropas add constraint UK_kkxodv3y2a31we1pyr97rpx8u unique (almacen_id)
+2023-12-19 19:36:10,806 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table estantes add constraint FK_BODEGA_ID foreign key (bodega_id) references almacenes (id)
+2023-12-19 19:36:11,180 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table ropas add constraint FX_ALMACEN_ID foreign key (almacen_id) references almacenes (id)
+2023-12-19 19:36:11,538 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table ropas add constraint FK1fclji77u1e5ggrs4b1s8oea6 foreign key (producto_id) references productos (id)
+2023-12-19 19:36:11,903 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] INSERT INTO productos(nombre, nombre_marca, numero_articulo, fecha_de_llegada)VALUES('aadasda', 'Adidas', '21', '2018-03-01')
+2023-12-19 19:36:11,965 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 19:36:12,826 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-19 19:36:14,832 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-19 19:36:15,998 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-19 19:36:16,748 INFO org.springframework.boot.StartupInfoLogger [main] Started VentasDeCualquierTipoApplicationTests in 20.769 seconds (process running for 24.74)

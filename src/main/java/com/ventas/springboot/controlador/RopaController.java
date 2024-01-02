@@ -7,16 +7,20 @@ import com.ventas.springboot.service.contratos.EstanteDAO;
 import com.ventas.springboot.service.contratos.ProductoDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
 @Deprecated
+@RequestMapping("/ropas")
+@ConditionalOnProperty(prefix = "app", name = "controller.enable-dto", havingValue = "false")
 public class RopaController extends ProductoController{
     private final EstanteDAO estanteDAO;
 

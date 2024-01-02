@@ -1,0 +1,43 @@
+2024-01-02 10:01:22,642 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-01-02 10:01:22,820 INFO o.s.b.StartupInfoLogger [restartedMain] Starting VentasDeCualquierTipoApplication using Java 17.0.7 with PID 18496 (C:\Users\aermb\OneDrive\Escritorio\DOMINGOS SPRING-BOOT\ventas-de-cualquier-tipo\target\classes started by aermb in C:\Users\aermb\OneDrive\Escritorio\DOMINGOS SPRING-BOOT\ventas-de-cualquier-tipo)
+2024-01-02 10:01:22,825 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-01-02 10:01:23,208 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-02 10:01:23,221 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-02 10:01:26,388 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-02 10:01:26,613 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 206 ms. Found 3 JPA repository interfaces.
+2024-01-02 10:01:28,618 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9082 (http)
+2024-01-02 10:01:28,642 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9082"]
+2024-01-02 10:01:28,648 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-01-02 10:01:28,649 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-01-02 10:01:28,890 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-01-02 10:01:28,895 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 5667 ms
+2024-01-02 10:01:29,345 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-02 10:01:29,536 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.9.Final
+2024-01-02 10:01:29,542 INFO o.h.c.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2024-01-02 10:01:30,207 INFO o.h.b.i.BytecodeProviderInitiator [restartedMain] HHH000021: Bytecode provider name : bytebuddy
+2024-01-02 10:01:30,524 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-02 10:01:30,583 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-01-02 10:01:30,957 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@698f3b2d
+2024-01-02 10:01:30,961 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-01-02 10:01:31,926 INFO o.h.b.i.BytecodeProviderInitiator [restartedMain] HHH000021: Bytecode provider name : bytebuddy
+2024-01-02 10:01:33,606 INFO o.h.m.i.EmbeddableInstantiatorPojoStandard [restartedMain] HHH000182: No default (no-argument) constructor for class: com.ventas.springboot.modelo.entidades.entity.Material (class must be instantiated by Interceptor)
+2024-01-02 10:01:34,086 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-02 10:01:34,128 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table estantes drop foreign key FK_BODEGA_ID
+2024-01-02 10:01:34,243 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table ropas drop foreign key FX_ALMACEN_ID
+2024-01-02 10:01:34,469 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table ropas drop foreign key FK1fclji77u1e5ggrs4b1s8oea6
+2024-01-02 10:01:34,599 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] drop table if exists almacenes
+2024-01-02 10:01:34,692 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] drop table if exists estantes
+2024-01-02 10:01:34,766 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] drop table if exists productos
+2024-01-02 10:01:34,850 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] drop table if exists ropas
+2024-01-02 10:01:35,108 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table almacenes (bloque_de_estantes integer, id integer not null auto_increment, fecha_entrada datetime(6), fecha_salida datetime(6), numero_del_estante varchar(255) not null, primary key (id)) engine=InnoDB
+2024-01-02 10:01:35,828 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table estantes (bodega_id integer, cantidad_ropa integer, id integer not null auto_increment, numero_estante integer not null, tamaño_estante varchar(255), tipo_vestimenta enum ('CASUAL','DEPORTIVA','FORMAL','SEMIFORMAL'), primary key (id)) engine=InnoDB
+2024-01-02 10:01:36,388 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table productos (id integer not null auto_increment, fecha_de_llegada datetime(6) not null, numero_articulo varchar(10) not null, nombre varchar(60) not null, nombre_marca varchar(60) not null, calle varchar(255), codigo_postal varchar(255), nombre_de_fabrica varchar(255), numero varchar(255), primary key (id)) engine=InnoDB
+2024-01-02 10:01:36,788 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] create table ropas (almacen_id integer, precio decimal(38,2), producto_id integer not null, calidad varchar(255), colordetinte varchar(255), material varchar(255), ropa varchar(255), tipo_ropa enum ('PRENDA_HOMBRE','PRENDA_MUJER'), tipo_vestimenta enum ('CASUAL','DEPORTIVA','FORMAL','SEMIFORMAL'), estante varbinary(255), primary key (producto_id)) engine=InnoDB
+2024-01-02 10:01:37,294 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table almacenes add constraint UK_sj757y2oy0tc05d3kxiquohk2 unique (numero_del_estante)
+2024-01-02 10:01:37,463 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table productos add constraint UK_5f2vwu3i1qftk3qv24c0nbsd4 unique (numero_articulo)
+2024-01-02 10:01:37,652 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table ropas add constraint UK_kkxodv3y2a31we1pyr97rpx8u unique (almacen_id)
+2024-01-02 10:01:37,871 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table estantes add constraint FK_BODEGA_ID foreign key (bodega_id) references almacenes (id)
+2024-01-02 10:01:38,483 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table ropas add constraint FX_ALMACEN_ID foreign key (almacen_id) references almacenes (id)
+2024-01-02 10:01:38,975 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] alter table ropas add constraint FK1fclji77u1e5ggrs4b1s8oea6 foreign key (producto_id) references productos (id)
+2024-01-02 10:01:39,642 DEBUG o.h.e.j.s.SqlStatementLogger [restartedMain] INSERT INTO productos(nombre, nombre_marca, numero_articulo, fecha_de_llegada)VALUES('aadasda', 'Adidas', '21', '2018-03-01')
+2024-01-02 10:01:39,709 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'

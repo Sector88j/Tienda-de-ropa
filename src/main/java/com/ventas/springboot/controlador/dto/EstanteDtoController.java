@@ -3,9 +3,7 @@ package com.ventas.springboot.controlador.dto;
 import com.ventas.springboot.modelo.entidades.dto.EstanteDTO;
 import com.ventas.springboot.modelo.entidades.entity.Estante;
 import com.ventas.springboot.modelo.entidades.mapper.mapstruct.EstanteMapperMS;
-import com.ventas.springboot.modelo.entidades.mapper.mapstruct.RopaMapper;
 import com.ventas.springboot.service.contratos.EstanteDAO;
-import com.ventas.springboot.service.contratos.ProductoDAO;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -13,13 +11,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+
+@RequestMapping("/estantes")
 @ConditionalOnProperty(prefix = "app", name = "controller.enable-dto", havingValue = "true")
 @Api(value = "Acciones relacionadas sobre cambio de estantes", tags = "Acciones sobre Estantes")
 public class EstanteDtoController extends GenericDtoController<Estante, EstanteDAO>{

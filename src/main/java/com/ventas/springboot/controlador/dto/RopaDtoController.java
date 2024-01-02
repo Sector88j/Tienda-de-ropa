@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/Ropas")
+@RequestMapping("/ropas")
 @ConditionalOnProperty(prefix = "app", name = "controller.enable-dto", havingValue = "true")
 public class RopaDtoController extends ProductoDtoController{
     public RopaDtoController(ProductoDAO service, RopaMapper ropaMapper){

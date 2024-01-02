@@ -11,15 +11,15 @@
 
     <appender name="RollingFile"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS}/db_ventas-log.log</file>
+        <file>${LOGS}/ventas_de_cualquier_tipo-log.log</file>
         <encoder
                 class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>%d %p %C{} [%t] %m%n</Pattern>
+            <Pattern>%d %p %C{1} [%t] %m%n</Pattern>
         </encoder>
 
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOGS}/archived/db_ventas-log-%d{yyyy-MM-dd}.%i.log
+            <fileNamePattern>${LOGS}/archived/ventas_de_cualquier_tipo-log-%d{yyyy-MM-dd}.%i.log
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -32,5 +32,9 @@
         <appender-ref ref="consola"/>
         <appender-ref ref="RollingFile"/>
     </root>
+
+    <!-- Configuración específica para Swagger -->
+    <logger name="springfox.documentation.swagger.web.ApiResourceController" level="DEBUG" />
+    <logger name="springfox.documentation.swagger2.web.Swagger2Controller" level="DEBUG" />
 
 </configuration>

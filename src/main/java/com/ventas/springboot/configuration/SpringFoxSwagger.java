@@ -3,6 +3,7 @@ package com.ventas.springboot.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -15,13 +16,13 @@ import java.util.Collections;
 
 @Configuration
 @EnableSwagger2
-public class SpringFoxSwagger {
+public class SpringFoxSwagger implements WebMvcConfigurer {
 
     @Bean
     public Docket getDocket(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.springsimplespasos.db ventas.ventas-de-cualquier-tipo.controlador.dto"))
+                .apis(RequestHandlerSelectors.basePackage("com.ventas.springboot.controlador.dto"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
@@ -33,7 +34,7 @@ public class SpringFoxSwagger {
                 "API para el manejo de nuestra tienda ropa",
                 "V2",
                 "Terminos del servicio",
-                new Contact("Estudiante. Alex Rodríguez", "www.google.com", "mm@gmail.com"),
+                new Contact("Estudiante", "www.google.com", "mm@gmail.com"),
                 "Licencia de API", "API licencia url", Collections.emptyList()
         );
     }

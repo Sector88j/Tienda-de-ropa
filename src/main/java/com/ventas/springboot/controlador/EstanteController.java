@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Deprecated
 @RestController
+@RequestMapping("/estantes")
 @ConditionalOnProperty(prefix = "app", name = "controller.enable-dto", havingValue = "false")
 public class EstanteController extends GenericController<Estante, EstanteDAO>{
 

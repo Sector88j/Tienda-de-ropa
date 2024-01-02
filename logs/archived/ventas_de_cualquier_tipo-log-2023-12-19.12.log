@@ -1,0 +1,6 @@
+2023-12-19 20:27:06,142 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9082"]
+2023-12-19 20:27:06,259 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 9082 (http) with context path '/api/v2/ventas_de_cualquier_tipo'
+2023-12-19 20:27:06,940 INFO o.s.b.StartupInfoLogger [restartedMain] Started VentasDeCualquierTipoApplication in 22.629 seconds (process running for 25.517)
+2023-12-19 20:28:05,417 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 20:28:05,425 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-19 20:28:05,447 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
